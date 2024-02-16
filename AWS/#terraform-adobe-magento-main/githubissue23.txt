@@ -1,0 +1,17 @@
+module.magento.module.magento.aws_alb.alb_internal: Still creating... [2m50s elapsed]
+module.magento.module.magento.aws_alb.alb_internal: Creation complete after 2m58s [id=arn:aws:elasticloadbalancing:eu-west-1:464148620691:loadbalancer/app/alb-internal/b3792917185db033]
+module.magento.module.magento.data.template_file.varnish_userdata: Reading...
+module.magento.module.magento.data.template_file.varnish_userdata: Read complete after 0s [id=1a7047b636f724a9d6db32991271c688c325b6b19b185beee292c14c10009de8]
+module.magento.module.magento.aws_alb_listener.alb_internal_listener_http: Creating...
+module.magento.module.magento.aws_alb_listener.alb_internal_listener_http: Creation complete after 1s [id=arn:aws:elasticloadbalancing:eu-west-1:464148620691:listener/app/alb-internal/b3792917185db033/6cfabc4525bcc717]
+╷
+│ Error: Error creating S3 bucket: BucketAlreadyExists: The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again.
+│ 	status code: 409, request id: DPHQ1H930F1JQ2FW, host id: dg8wQy9BQcY6/RWY+NC9sbMjrT2niz9VsOaViELxK73ss//69GcohNqDVFN6I4UOuNA/vvLo8HX+tVcP/dJJVw==
+│ 
+│   with module.magento.module.magento.aws_s3_bucket.lb_logs,
+│   on ../modules/magento/alb_and_asg.tf line 5, in resource "aws_s3_bucket" "lb_logs":
+│    5: resource "aws_s3_bucket" "lb_logs" {
+│ 
+╵
+Operation failed: failed running terraform apply (exit 1)
+
